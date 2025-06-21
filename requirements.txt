@@ -3,5 +3,5 @@ pandas
 numpy
 joblib
 scikit-learn
-tensorflow-cpu==2.13.0
+tensorflow-2.19.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl 
 
