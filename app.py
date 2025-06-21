@@ -7,7 +7,7 @@ st.write('Enter the following information to predict customer churn:')
 st.write('---')
 
 # loading artefact
-loaded_model = joblib('bank_customer_churn.h5')
+loaded_model = joblib.load('bank_customer_churn.h5')
 scaler_load = joblib.load('scaler_bank_customer.h5')
 encoded_loaded = joblib.load('encoder_bank_customer.h5')
 
