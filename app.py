@@ -1,15 +1,20 @@
 import streamlit as st
 import joblib
 import pandas as pd
+import cloudpickle
 
 st.title('Bank Customer Churn Prediction')
 st.write('Enter the following information to predict customer churn:')
 st.write('---')
 
 # loading artefact
-loaded_model = joblib.load('bank_customer_churn.pkl')
-scaler_load = joblib.load('scaler_bank_customer.pkl')
-encoded_loaded = joblib.load('encoder_bank_customer.pkl')
+
+with open('bank_customer_churn.pkl', 'rb') as f:
+    loaded_model = cloudpickle.load(f)
+with open('scaler_bank_customer.pkl', 'rb') as s:
+  scaler_load = cloudpickle.load(s)
+with open('encoder_bank_customer.pkl', 'rb') as e:
+  encoded_loaded = cloudpickle.load(e)
 
 # creating user inputs
 credit = st.number_input('Credit Score')
