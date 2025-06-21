@@ -1,10 +1,15 @@
+from tensorflow.keras.models import load_model
+import streamlit as st
+import joblib
+import pandas as pd
+
 st.title('Bank Customer Churn Prediction')
 st.write('Enter the following information to predict customer churn:')
 st.write('---')
 
 # loading articft
-loaded_model = load_model('/content/drive/MyDrive/Colab Notebooks/saved_models/bank_customer_churn.h5')
-scaler_load = joblib.load('/content/drive/MyDrive/Colab Notebooks/saved_models/scaler_bank_customer.h5')
+loaded_model = load_model('bank_customer_churn.h5')
+scaler_load = joblib.load('scaler_bank_customer.h5')
 encoded_loaded = joblib.load('/content/drive/MyDrive/Colab Notebooks/saved_models/encoder_bank_customer.h5')
 
 # creating user inputs
