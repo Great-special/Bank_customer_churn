@@ -10,7 +10,7 @@ st.write('---')
 # loading articft
 loaded_model = load_model('bank_customer_churn.h5')
 scaler_load = joblib.load('scaler_bank_customer.h5')
-encoded_loaded = joblib.load('/content/drive/MyDrive/Colab Notebooks/saved_models/encoder_bank_customer.h5')
+encoded_loaded = joblib.load('encoder_bank_customer.h5')
 
 # creating user inputs
 credit = st.number_input('Credit Score')
