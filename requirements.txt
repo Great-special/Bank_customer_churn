@@ -3,5 +3,5 @@ pandas
 numpy
 joblib
 scikit-learn
-tensorflow
-keras
+tensorflow-cpu==2.13.0
+
