@@ -34,9 +34,9 @@ x['Geography_encoded'] = encoded_loaded.fit_transform(x['Geography_encoded'])
 
 x_scaled = scaler_load.transform(x)
 
-predicted_output = loaded_model.predict(x_scaled)
-predicted_output = (predicted_output > 0.5).astype(int)
 generate = st.button("Generate")
 
 if generate:
+    predicted_output = loaded_model.predict(x_scaled)
+    predicted_output = (predicted_output > 0.5).astype(int)
     st.write("Will Exit", "yes" if predicted_output == 1 else "no")
